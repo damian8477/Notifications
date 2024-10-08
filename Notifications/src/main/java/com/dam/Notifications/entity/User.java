@@ -1,6 +1,7 @@
 package com.dam.Notifications.entity;
 
 import jakarta.persistence.*;
+
 import java.util.Set;
 
 @Entity

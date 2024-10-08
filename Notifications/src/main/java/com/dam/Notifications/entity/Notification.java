@@ -9,8 +9,10 @@ import lombok.Setter;
 import java.time.LocalDate;
 
 @Entity(name = "notification")
-@Getter @Setter
-@AllArgsConstructor @NoArgsConstructor
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Notification {
 
     @Id
