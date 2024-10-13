@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.List;
+import java.util.Set;
 
 @Service
 public class NotificationService {
@@ -34,4 +36,11 @@ public class NotificationService {
 
         return notificationRepository.save(notification);
     }
+
+    public Set<Notification> getNotifications(Long userId) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new IllegalArgumentException("User with id " + userId + " not found"));
+        return user.getNotifications();
+    }
+
 }
